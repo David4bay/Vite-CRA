@@ -1,0 +1,11 @@
+textarea {
+    resize: none;
+}
+
+textarea::placeholder {
+    padding: 10px;
+}
+
+input[type='text']::placeholder {
+    padding: 10px;
+}
