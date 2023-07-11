@@ -20,7 +20,7 @@ function Note({ note, notes, setNotes }) {
   };
 
   const deleteNote = note => {
-    setNotes(notes.filter((notice) => notice !== note))
+    setNotes(notes.filter((notice) => notice.id !== note.id))
   }
 
   return (
