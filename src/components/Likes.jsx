@@ -5,14 +5,13 @@ function Likes() {
     const [clickedLike, setClickedLike] = useState(false);
 
     const likeHandler = () => {
-        if (clickedLike) {
-            setLikes(0);
-        }
-        setLikes(likes => likes + 1);
-    }
-    if (clickedLike === false) {
-        setLikes('');
+     if (clickedLike === false) {
+        setLikes(1);
         setClickedLike(true);
+     } else {
+        setClickedLike(false);
+        setLikes(0);
+     }
     }
     return (
         <>

@@ -18,11 +18,11 @@ const CreateNote = ({textInput, setTextInput, notes, setNotes, name, setName}) =
         setName(e.target.value);
     }
 
-    if (name.length > 15) {
-        setName(name.match(/[A-Za-z0-9?]{15}/));
-    }
     if (textInput.length > 45) {
-        setTextInput(textInput.match(/[A-Za-z0-9]{45}/));
+        setTextInput(textInput.match(/[A-Za-z0-9?\s]{45}/));
+    }
+    if (name.length > 15) {
+        setName(name.match(/[A-Za-z0-9?\s]{15}/));
     }
     
     return (
